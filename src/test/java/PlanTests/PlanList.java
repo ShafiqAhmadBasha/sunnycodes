@@ -16,4 +16,9 @@ public class PlanList extends BaseTest {
     public void validateDateInPlanList(){
 
     }
+
+    @Test
+    public void validatePageTitleInPlanList(){
+
+    }
 }
