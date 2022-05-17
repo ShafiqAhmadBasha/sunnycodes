@@ -20,6 +20,10 @@ public class ReportLog {
 	public static void startTest(String testTitle) {
 		extentTest = extentReport.startTest(testTitle);
 	}
+
+	public static void closeResport(){
+		extentReport.flush();
+	}
 	
 	public static void LOG(String message) {
 		extentTest.log(LogStatus.INFO, message);
