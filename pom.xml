@@ -24,7 +24,7 @@
                         <explicitwait>60</explicitwait>
                         <browserName>chrome</browserName>
                         <browserVersion>101</browserVersion>
-                        <env>qa</env>
+                        <env>dev</env>
                         <higlightcolor>green</higlightcolor>
                     </systemPropertyVariables>
                 </configuration>
