@@ -8,7 +8,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import utilities.Common;
 import utilities.ReportLog;
+
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -28,6 +30,7 @@ public class BaseTest {
     //testng annotations
     @BeforeSuite
     public void  beforeSuite(){
+        Common.laodEnvData();
         ReportLog.initializeReport();
     }
 
@@ -89,8 +92,7 @@ public class BaseTest {
 
     //launch application and return generic object
     public <T extends BasePage>T launchApplication(Class cls){
-
-
+        driver.get(Common.getEnvData("appurl"));
         return  getGenericObject(cls);
     }
 
