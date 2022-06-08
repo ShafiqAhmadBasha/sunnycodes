@@ -10,7 +10,10 @@ public class LoginActions extends LoginPage {
     }
 
     //method
-    public void performUserLogin(String userName, String password){
-        //code to log into application
+    public DashboardActions performUserLogin(String userName, String password){
+       enterText(txtUserName, userName, "UserName textbox");
+       enterText(txtPassword, password, "Password textbox");
+       click(btnLogin, "Loign button");
+        return new DashboardActions(getDriver());
     }
 }
