@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class BasePage {
 
     private WebDriver driver = null;
+    private  String byMenu = "//a[text()='%s']";
 
     //property
     public  WebDriver getDriver(){
@@ -88,5 +89,15 @@ public abstract class BasePage {
             }
         }
         ReportLog.LOG("Switched to window : " + title);
+    }
+
+    public  <T extends BasePage>T selectMenu(String menu, String option, Class cls){
+        By by = By.xpath(String.format(byMenu, menu));
+        click(by, menu);
+
+        by = By.xpath(String.format(byMenu, option));
+        click(by, option);
+
+        return getGenericObject(cls);
     }
 }
