@@ -11,10 +11,13 @@ public class Common {
 
     public static final HashMap<String,  String> menu = new HashMap<String, String>(){{
         put("client", "Client");
+        put("management","Menu Management");
     }};
 
     public static final HashMap<String,  String> menuOption = new HashMap<String, String>(){{
         put("store", "Store");
+        put("menuitem","Menu Item");
+        put("category","Category");
     }};
 
     public static void laodEnvData(){
